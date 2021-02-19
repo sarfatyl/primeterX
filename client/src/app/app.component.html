@@ -1,0 +1,8 @@
+<div class="title">PerimeterX Logs</div>
+<input type="checkbox" (change)="filterByBlackList($event)"/>Show only blacklist
+<input type="text" class="domain-filter" placeholder="Domain" [(ngModel)]="domainFilter" >
+<app-table [tableSettings]="tableSettings" (back)="back()" (next)="next()"></app-table>
+<app-linear-chart [linearData]="this.linearData">
+</app-linear-chart>
+<app-bar-chart >
+</app-bar-chart>

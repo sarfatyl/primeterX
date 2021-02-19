@@ -1,0 +1,16 @@
+<div class="headers" *ngIf="tableSettings">
+  <div class="header" *ngFor="let header of tableSettings.headers">
+    {{header.title}}
+  </div>
+</div>
+<div class="rows" *ngIf="tableSettings">
+  <div class="row" *ngFor="let row of tableSettings.data">
+    <div class="cell" *ngFor="let header of tableSettings.headers">
+      {{row[header.key]}}
+    </div>
+  </div>
+</div>
+<div class="pagination">
+<button (click)="back.emit(true)">Back</button>
+<button (click)="next.emit(true)">Next</button>
+</div>
